@@ -1623,6 +1623,19 @@ const NSTimeInterval kAnimationDuration = 0.125;
 	return [tabContentsArray_ objectAtIndex:index];
 }
 
+-(CTTabContentsController*)tabContentsControllerForTabContents:(CTTabContents*)contents
+{
+    for(CTTabContentsController* ctrl in tabContentsArray_)
+    {
+        if([ctrl isControllerForTabContents:contents])
+        {
+            return ctrl;
+        }
+    }
+    
+    return nil;
+}
+
 /*- (void)attachConstrainedWindow:(ConstrainedWindowMac*)window {
  // TODO(thakis, avi): Figure out how to make this work when tabs are dragged
  // out or if fullscreen mode is toggled.

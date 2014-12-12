@@ -65,4 +65,7 @@
 // Returns the height required by devtools and divider, or 0 if no devtools are
 // docked to the tab.
 //- (CGFloat)devToolsHeight;
+
+-(BOOL)isControllerForTabContents:(CTTabContents*)contents;
+
 @end

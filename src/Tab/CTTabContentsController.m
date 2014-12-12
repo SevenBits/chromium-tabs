@@ -33,6 +33,11 @@
 	//  [super dealloc];
 }
 
+-(BOOL)isControllerForTabContents:(CTTabContents*)contents
+{
+    return [contents isEqual:contents_];
+}
+
 // Call when the tab view is properly sized and the render widget host view
 // should be put into the view hierarchy.
 - (void)ensureContentsVisible {

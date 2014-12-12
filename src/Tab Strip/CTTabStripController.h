@@ -134,6 +134,8 @@
 //- (void)removeConstrainedWindow:(ConstrainedWindowMac*)window;
 //- (void)updateDevToolsForContents:(CTTabContents*)contents;
 
+-(CTTabContentsController*)tabContentsControllerForTabContents:(CTTabContents*)contents;
+
 @end
 
 // Notification sent when the number of tabs changes. The object will be this
