@@ -838,6 +838,11 @@ const int kNoTab = NSNotFound;
     [[NSNotificationCenter defaultCenter] postNotificationName:CTTabReplacedNotification 
 														object:self 
 													  userInfo:userInfo];
+    
+    // If you don't do this, you get an EXC_BREAKPOINT in sendEvent
+    [self changeSelectedContentsFrom:oldContents
+                                 toIndex:index
+                             userGesture:NO];
 	return oldContents;
 }
 @end

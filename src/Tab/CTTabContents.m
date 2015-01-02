@@ -182,7 +182,8 @@ _synthRetain(NSImage*, Icon, icon);
 - (void)tabReplaced:(CTTabContents*)oldContents
           inBrowser:(CTBrowser*)browser
             atIndex:(NSInteger)index {
-  self.browser = browser;
+    self.browser = browser;
+    oldContents.browser = nil;
 }
 
 // Called when this tab is about to close

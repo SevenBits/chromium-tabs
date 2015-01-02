@@ -319,6 +319,7 @@ const NSTimeInterval kAnimationDuration = 0.125;
 												 selector:@selector(tabDidInsert:) 
 													 name:CTTabInsertedNotification 
 												   object:tabStripModel_];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabDidReplace:) name:CTTabReplacedNotification object:tabStripModel_];
 		
 		[[NSNotificationCenter defaultCenter] addObserver:self 
 												 selector:@selector(tabDidChange:) 
@@ -1717,7 +1718,23 @@ const NSTimeInterval kAnimationDuration = 0.125;
 #pragma mark -
 #pragma mark Delegate methods
 
-- (void)tabDidInsert:(NSNotification *)notification {
+-(void)tabDidReplace:(NSNotification*)notification {
+    NSDictionary *userInfo = notification.userInfo;
+    CTTabContents *newContents = [userInfo valueForKey:CTTabNewContentsUserInfoKey];
+    CTTabContents *oldContents = [userInfo valueForKey:CTTabContentsUserInfoKey];
+    NSInteger modelIndex = [[userInfo valueForKey:CTTabIndexUserInfoKey] intValue];
+    [self tabReplaced:oldContents withContents:newContents atIndex:modelIndex];
+}
+-(void)tabReplaced:(CTTabContents*)oldContents withContents:(CTTabContents*)newContents atIndex:(NSInteger)modelIndex
+{
+    NSInteger index = [self indexFromModelIndex:modelIndex];
+    CTTabController* oldTab = [tabArray_ objectAtIndex:index];
+    [self removeTab:oldTab];
+    [self tabInsertedWithContents:newContents atIndex:index inForeground:YES];
+    [self tabSelectedWithContents:newContents previousContents:oldContents atIndex:index userGesture:NO];
+}
+
+-(void)tabDidInsert:(NSNotification *)notification {
 	NSDictionary *userInfo = notification.userInfo;
 	CTTabContents *contents = [userInfo valueForKey:CTTabContentsUserInfoKey];
 	NSInteger modelIndex = [[userInfo valueForKey:CTTabIndexUserInfoKey] intValue];
