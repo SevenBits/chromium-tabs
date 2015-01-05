@@ -1725,12 +1725,81 @@ const NSTimeInterval kAnimationDuration = 0.125;
     NSInteger modelIndex = [[userInfo valueForKey:CTTabIndexUserInfoKey] intValue];
     [self tabReplaced:oldContents withContents:newContents atIndex:modelIndex];
 }
+
 -(void)tabReplaced:(CTTabContents*)oldContents withContents:(CTTabContents*)newContents atIndex:(NSInteger)modelIndex
 {
+    oldContents.isActive = NO;
+    
     NSInteger index = [self indexFromModelIndex:modelIndex];
     CTTabController* oldTab = [tabArray_ objectAtIndex:index];
-    [self removeTab:oldTab];
-    [self tabInsertedWithContents:newContents atIndex:index inForeground:YES];
+    
+    // Remove the view from the tab strip.
+    NSView* oldTabView = [oldTab view];
+    [oldTabView removeFromSuperview];
+    
+    // Remove ourself as an observer.
+    [[NSNotificationCenter defaultCenter]
+     removeObserver:self
+     name:NSViewDidUpdateTrackingAreasNotification
+     object:oldTabView];
+    
+    // Clear the tab controller's target.
+    // TODO(viettrungluu): [crbug.com/23829] Find a better way to handle the tab
+    // controller's target.
+    [oldTab setTarget:nil];
+    
+    if ([hoveredTab_ isEqual:oldTabView])
+        hoveredTab_ = nil;
+    
+    NSValue* identifier = [NSValue valueWithPointer:(__bridge const void*)oldTabView];
+    [targetFrames_ removeObjectForKey:identifier];
+    
+    assert(newContents);
+    assert(modelIndex == kNoTab ||
+           [tabStripModel_ containsIndex:modelIndex]);
+    
+    // Make a new tab. Load the contents of this tab from the nib and associate
+    // the new controller with |contents| so it can be looked up later.
+    CTTabContentsController* contentsController =
+    [browser_ createTabContentsControllerWithContents:newContents];
+    
+    
+    CTTabContentsController* oldController = [tabContentsArray_ objectAtIndex:index];
+    [oldController willResignActiveTab];
+    
+    [tabContentsArray_ replaceObjectAtIndex:index withObject:contentsController];
+    
+    // Make a new tab and add it to the strip. Keep track of its controller.
+    CTTabController* newController = [self newTab];
+    [newController setMini:[tabStripModel_ isMiniTabAtIndex:modelIndex]];
+    [newController setPinned:[tabStripModel_ isTabPinnedAtIndex:modelIndex]];
+    [newController setApp:[tabStripModel_ isAppTabAtIndex:modelIndex]];
+    
+    [tabArray_ replaceObjectAtIndex:index withObject:newController];
+    NSView* newView = [newController view];
+    
+    // Set the originating frame to just below the strip so that it animates
+    // upwards as it's being initially layed out. Oddly, this works while doing
+    // something similar in |-layoutTabs| confuses the window server.
+    [newView setFrame:NSOffsetRect([newView frame],
+                                   0, -[[self class] defaultTabHeight])];
+    
+    [self setTabTitle:newController withContents:newContents];
+    
+    
+    [contentsController willBecomeActiveTab];
+    
+    // If a tab is being inserted, we can again use the entire tab strip width
+    // for layout.
+    availableResizeWidth_ = kUseFullAvailableWidth;
+    
+    // During normal loading, we won't yet have a favicon and we'll get
+    // subsequent state change notifications to show the throbber, but when we're
+    // dragging a tab out into a new window, we have to put the tab's favicon
+    // into the right state up front as we won't be told to do it from anywhere
+    // else.
+    [self updateFavIconForContents:newContents atIndex:modelIndex];
+    
     [self tabSelectedWithContents:newContents previousContents:oldContents atIndex:index userGesture:NO];
 }
 

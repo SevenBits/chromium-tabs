@@ -182,6 +182,10 @@ _synthRetain(NSImage*, Icon, icon);
 - (void)tabReplaced:(CTTabContents*)oldContents
           inBrowser:(CTBrowser*)browser
             atIndex:(NSInteger)index {
+    
+    // If there's only one, then make sure we assign
+    // that same browser before nilling it out in
+    // the other tab so no GC will kick in
     self.browser = browser;
     oldContents.browser = nil;
 }
