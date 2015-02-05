@@ -463,7 +463,7 @@ const NSTimeInterval kAnimationDuration = 0.125;
 	// we're gone.
 	for (CTTabController* controller in closingControllers_) {
 		NSView* view = [controller view];
-		[[[view animationForKey:@"frameOrigin"] delegate] invalidate];
+		//[[[view animationForKey:@"frameOrigin"] delegate] invalidate];
 	}
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
 }
