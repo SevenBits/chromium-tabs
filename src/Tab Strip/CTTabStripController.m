@@ -20,6 +20,8 @@
 #import "GTMNSAnimation+Duration.h"
 #import "CTBrowserCommand.h"
 
+#import "common.h"
+
 NSString* const kTabStripNumberOfTabsChanged = @"kTabStripNumberOfTabsChanged";
 
 // The images names used for different states of the new tab button.
@@ -461,10 +463,10 @@ const NSTimeInterval kAnimationDuration = 0.125;
 	[newTabButton_ removeTrackingArea:newTabTrackingArea_];
 	// Invalidate all closing animations so they don't call back to us after
 	// we're gone.
-	for (CTTabController* controller in closingControllers_) {
-		NSView* view = [controller view];
+	//for (CTTabController* controller in closingControllers_) {
+		//NSView* view = [controller view];
 		//[[[view animationForKey:@"frameOrigin"] delegate] invalidate];
-	}
+	//}
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 

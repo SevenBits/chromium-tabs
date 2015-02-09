@@ -13,6 +13,8 @@
 
 #import "CTTabContents.h"
 
+#import "common.h"
+
 @interface CTTabStripModel (PrivateMethods)
 // Returns true if the specified CTTabContents is a New Tab at the end of the
 // TabStrip. We check for this because opener relationships are _not_

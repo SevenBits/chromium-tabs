@@ -11,6 +11,8 @@
 #import "CTTabStripView.h"
 #import "HoverCloseButton.h"
 
+#import "common.h"
+
 // Constants for inset and control points for tab shape.
 const CGFloat kInsetMultiplier = 2.0/3.0;
 const CGFloat kControlPoint1Multiplier = 1.0/3.0;

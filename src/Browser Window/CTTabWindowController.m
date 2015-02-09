@@ -5,6 +5,8 @@
 #import "CTTabWindowController.h"
 #import "CTTabStripView.h"
 
+#import "common.h"
+
 @interface CTTabWindowController(PRIVATE)
 - (void)setUseOverlay:(BOOL)useOverlay;
 @end

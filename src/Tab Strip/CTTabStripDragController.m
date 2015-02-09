@@ -10,6 +10,8 @@
 #import "CTTabStripView.h"
 #import "CTTabWindowController.h"
 
+#import "common.h"
+
 // Replicate specific 10.7 SDK declarations for building with prior SDKs.
 #if !defined(MAC_OS_X_VERSION_10_7) || \
 MAC_OS_X_VERSION_MAX_ALLOWED < MAC_OS_X_VERSION_10_7
@@ -221,7 +223,7 @@ const NSTimeInterval kTearDuration = 0.333;
 			[[target window] orderFront:self];
 			NSRect tabStripFrame = [[target tabStripView] frame];
 			tabStripFrame.origin = [[target window]
-									convertBaseToScreen:tabStripFrame.origin];
+									convertRectToScreen:tabStripFrame].origin;
 			if (NSPointInRect(thisPoint, tabStripFrame)) {
 				newTarget = target;
 			}
@@ -350,9 +352,9 @@ const NSTimeInterval kTearDuration = 0.333;
 		// destination tab strip.
 		CTTabView* draggedTabView = (CTTabView*)[draggedController_ activeTabView];
 		NSRect tabFrame = [draggedTabView frame];
-		tabFrame.origin = [dragWindow_ convertBaseToScreen:tabFrame.origin];
+        tabFrame.origin = [dragWindow_ convertRectToScreen:NSMakeRect(origin.x, origin.y, 1, 1)].origin;
 		tabFrame.origin = [[targetController_ window]
-						   convertScreenToBase:tabFrame.origin];
+                           convertRectFromScreen:NSMakeRect(tabFrame.origin.x, tabFrame.origin.y, 1, 1)].origin;
 		tabFrame = [[targetController_ tabStripView]
 					convertRect:tabFrame fromView:nil];
 		[targetController_ insertPlaceholderForTab:[draggedTab_ tabView]

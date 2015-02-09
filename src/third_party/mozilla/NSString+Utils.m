@@ -39,6 +39,7 @@
 #import <AppKit/AppKit.h>    // for NSStringDrawing.h
 
 #import "NSString+Utils.h"
+#import "common.h"
 //#import "googleurl/src/gurl.h"
 
 

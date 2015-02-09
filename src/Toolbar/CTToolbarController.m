@@ -3,6 +3,7 @@
 #import "CTToolbarView.h"
 #import "CTTabContents.h"
 #import "BackgroundGradientView.h"
+#import "common.h"
 
 @interface CTToolbarController (Private)
 - (BackgroundGradientView*)backgroundGradientView;

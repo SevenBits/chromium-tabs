@@ -7,9 +7,10 @@
 #import <objc/runtime.h>
 
 #import "CTBrowserWindow.h"
+#import "common.h"
 
 static const CGFloat kBrowserFrameViewPaintHeight = 60.0;
-static const NSPoint kBrowserFrameViewPatternPhaseOffset = { -5, 3 };
+//static const NSPoint kBrowserFrameViewPatternPhaseOffset = { -5, 3 };
 
 static BOOL gCanDrawTitle = NO;
 static BOOL gCanGetCornerRadius = NO;
@@ -73,7 +74,7 @@ static BOOL gCanGetCornerRadius = NO;
 	 instancesRespondToSelector:@selector(roundedCornerRadius)];
 }
 
-- (id)initWithFrame:(NSRect)frame {
+/*- (id)initWithFrame:(NSRect)frame {
 	// This class is not for instantiating.
 	[self doesNotRecognizeSelector:_cmd];
 	return nil;
@@ -83,7 +84,7 @@ static BOOL gCanGetCornerRadius = NO;
 	// This class is not for instantiating.
 	[self doesNotRecognizeSelector:_cmd];
 	return nil;
-}
+}*/
 
 // Here is our custom drawing for our frame.
 - (void)drawRect:(NSRect)rect {

@@ -174,7 +174,7 @@ const NSInteger CTWindowButtonsWithoutTabStripOffsetFromLeft = 8;
 // The tab strip view covers our window buttons. So we add hit testing here
 // to find them properly and return them to the accessibility system.
 - (id)accessibilityHitTest:(NSPoint)point {
-	NSPoint windowPoint = [self convertScreenToBase:point];
+	NSPoint windowPoint = [self convertRectToScreen:NSMakeRect(point.x, point.y, 1, 1)].origin;
 	NSControl* controls[] = { closeButton_, zoomButton_, miniaturizeButton_ };
 	id value = nil;
 	for (size_t i = 0; i < sizeof(controls) / sizeof(controls[0]); ++i) {

@@ -7,6 +7,8 @@
 #import "CTBrowserWindowController.h"
 #import "GTMNSAnimation+Duration.h"
 
+#import "common.h"
+
 NSString* const kWillEnterFullscreenNotification = @"WillEnterFullscreenNotification";
 NSString* const kWillLeaveFullscreenNotification = @"WillLeaveFullscreenNotification";
 

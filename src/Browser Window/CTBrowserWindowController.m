@@ -13,6 +13,9 @@
 #import "CTUtil.h"
 #import "FastResizeView.h"
 
+#import <objc/runtime.h>
+#import "common.h"
+
 //#import "scoped_nsdisable_screen_updates.h"
 
 @interface NSWindow (ThingsThatMightBeImplemented)
@@ -394,7 +397,8 @@ static CTBrowserWindowController* _currentMain = nil; // weak
 
 // Accept tabs from a CTBrowserWindowController with the same Profile.
 - (BOOL)canReceiveFrom:(CTTabWindowController*)source {
-	if (![source isKindOfClass:[isa class]]) {
+
+	if (![source isKindOfClass:object_getClass(self)]) {
 		return NO;
 	}
 	
@@ -442,8 +446,8 @@ static CTBrowserWindowController* _currentMain = nil; // weak
 		NSPoint tabOrigin = destinationFrame.origin;
 		tabOrigin = [[dragController tabStripView] convertPoint:tabOrigin
 														 toView:nil];
-		tabOrigin = [[view window] convertBaseToScreen:tabOrigin];
-		tabOrigin = [[self window] convertScreenToBase:tabOrigin];
+        tabOrigin = [[view window] convertRectToScreen:NSMakeRect(tabOrigin.x, tabOrigin.y, 1, 1)].origin;
+        tabOrigin = [[self window] convertRectFromScreen:NSMakeRect(tabOrigin.x, tabOrigin.y, 1, 1)].origin;
 		tabOrigin = [[self tabStripView] convertPoint:tabOrigin fromView:nil];
 		destinationFrame.origin = tabOrigin;
 		

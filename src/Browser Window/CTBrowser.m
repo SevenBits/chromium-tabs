@@ -9,6 +9,9 @@
 #import "CTToolbarController.h"
 #import "CTUtil.h"
 
+#import <objc/runtime.h>
+#import "common.h"
+
 @implementation CTBrowser {
 	CTTabStripModel *tabStripModel_;
 	
@@ -27,7 +30,7 @@
 // based on current window controller's class
 - (CTBrowser*)createNewBrowser {
 	// Create a new browser & window when we start
-	CTBrowser *browser = [isa browser];
+	CTBrowser *browser = [object_getClass(self) browser];
 	Class cls = self.windowController ? 
 		[self.windowController class] :
 		[CTBrowserWindowController class];
