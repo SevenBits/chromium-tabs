@@ -48,11 +48,15 @@ const CGFloat kXShadowCircleAlpha = 0.1;
 	// If the user is hovering over the button, a light/dark gray circle is drawn
 	// behind the 'x'.
 	if (hoverState_ != kHoverStateNone) {
-		// Adjust the darkness of the circle depending on whether it is being
+		// Adjust the color of the circle depending on whether it is being
 		// clicked.
 		CGFloat white = (hoverState_ == kHoverStateMouseOver) ?
         kCircleHoverWhite : kCircleClickWhite;
-		[[NSColor colorWithCalibratedWhite:white alpha:1.0] set];
+        if(white == kCircleHoverWhite){
+            [[NSColor colorWithRed:0.82 green:0.50 blue:0.48 alpha:1.0] set];
+        }else if(white == kCircleClickWhite){
+            [[NSColor colorWithRed:0.77 green:0.46 blue:0.47 alpha:1.0] set];
+        }
 		[circlePath_ fill];
 	}
 	
