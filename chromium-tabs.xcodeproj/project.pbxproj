@@ -106,17 +106,11 @@
 		65B60C461557CF12008B0072 /* ChromiumTabs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A3ED9831225E27E009E2908 /* ChromiumTabs.framework */; };
 		F1733CC0173B7D8400021BDE /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F1733CBE173B7D8400021BDE /* LICENSE */; };
 		F1733CC1173B7D8400021BDE /* LICENSE-chromium in Resources */ = {isa = PBXBuildFile; fileRef = F1733CBF173B7D8400021BDE /* LICENSE-chromium */; };
-		FD36B0BF1B98A9CD00FB32CC /* Toolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD36B0BE1B98A9CD00FB32CC /* Toolbar.xib */; };
-		FD36B0C11B98AB5C00FB32CC /* backwards.png in Resources */ = {isa = PBXBuildFile; fileRef = FD36B0C01B98AB5C00FB32CC /* backwards.png */; };
 		FD36B0C91B993BFF00FB32CC /* newtab.png in Resources */ = {isa = PBXBuildFile; fileRef = FD36B0C61B993BFF00FB32CC /* newtab.png */; };
 		FD36B0CA1B993BFF00FB32CC /* newtab_h.png in Resources */ = {isa = PBXBuildFile; fileRef = FD36B0C71B993BFF00FB32CC /* newtab_h.png */; };
 		FD36B0CB1B993BFF00FB32CC /* newtab_p.png in Resources */ = {isa = PBXBuildFile; fileRef = FD36B0C81B993BFF00FB32CC /* newtab_p.png */; };
 		FD36B0DB1B999BDD00FB32CC /* ToolbarButton.h in Headers */ = {isa = PBXBuildFile; fileRef = FD36B0D91B999BDD00FB32CC /* ToolbarButton.h */; };
 		FD36B0DC1B999BDD00FB32CC /* ToolbarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FD36B0DA1B999BDD00FB32CC /* ToolbarButton.m */; };
-		FD36B0DE1B99AA5400FB32CC /* forward.png in Resources */ = {isa = PBXBuildFile; fileRef = FD36B0DD1B99AA5400FB32CC /* forward.png */; };
-		FD36B0E01B99AAE200FB32CC /* reloadp.png in Resources */ = {isa = PBXBuildFile; fileRef = FD36B0DF1B99AAE200FB32CC /* reloadp.png */; };
-		FD36B0E21B99AC0300FB32CC /* homepage.png in Resources */ = {isa = PBXBuildFile; fileRef = FD36B0E11B99AC0300FB32CC /* homepage.png */; };
-		FD36B0E41B99AD4600FB32CC /* menubutton.png in Resources */ = {isa = PBXBuildFile; fileRef = FD36B0E31B99AD4600FB32CC /* menubutton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -253,17 +247,11 @@
 		8D1107320486CEB800E47090 /* Chromium Tabs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chromium Tabs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1733CBE173B7D8400021BDE /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F1733CBF173B7D8400021BDE /* LICENSE-chromium */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "LICENSE-chromium"; path = "../LICENSE-chromium"; sourceTree = "<group>"; };
-		FD36B0BE1B98A9CD00FB32CC /* Toolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Toolbar.xib; sourceTree = "<group>"; };
-		FD36B0C01B98AB5C00FB32CC /* backwards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backwards.png; path = gfx/backwards.png; sourceTree = "<group>"; };
 		FD36B0C61B993BFF00FB32CC /* newtab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = newtab.png; path = gfx/newtab.png; sourceTree = "<group>"; };
 		FD36B0C71B993BFF00FB32CC /* newtab_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = newtab_h.png; path = gfx/newtab_h.png; sourceTree = "<group>"; };
 		FD36B0C81B993BFF00FB32CC /* newtab_p.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = newtab_p.png; path = gfx/newtab_p.png; sourceTree = "<group>"; };
 		FD36B0D91B999BDD00FB32CC /* ToolbarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolbarButton.h; sourceTree = "<group>"; };
 		FD36B0DA1B999BDD00FB32CC /* ToolbarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolbarButton.m; sourceTree = "<group>"; };
-		FD36B0DD1B99AA5400FB32CC /* forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = forward.png; path = gfx/forward.png; sourceTree = "<group>"; };
-		FD36B0DF1B99AAE200FB32CC /* reloadp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reloadp.png; path = gfx/reloadp.png; sourceTree = "<group>"; };
-		FD36B0E11B99AC0300FB32CC /* homepage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homepage.png; path = gfx/homepage.png; sourceTree = "<group>"; };
-		FD36B0E31B99AD4600FB32CC /* menubutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menubutton.png; path = gfx/menubutton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,7 +330,6 @@
 				3A3EDAA71225F192009E2908 /* Localizable.strings */,
 				F1733CBE173B7D8400021BDE /* LICENSE */,
 				F1733CBF173B7D8400021BDE /* LICENSE-chromium */,
-				FD36B0BE1B98A9CD00FB32CC /* Toolbar.xib */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -365,15 +352,10 @@
 				FD36B0C61B993BFF00FB32CC /* newtab.png */,
 				FD36B0C71B993BFF00FB32CC /* newtab_h.png */,
 				FD36B0C81B993BFF00FB32CC /* newtab_p.png */,
-				FD36B0C01B98AB5C00FB32CC /* backwards.png */,
 				3A3ED35012256F06009E2908 /* throbber.png */,
 				3A286FFD1222D99B00F1BB78 /* sadfavicon.png */,
 				3A286FFA1222D94600F1BB78 /* throbber_waiting.png */,
 				3A286FF71222D85300F1BB78 /* default-icon.pdf */,
-				FD36B0DD1B99AA5400FB32CC /* forward.png */,
-				FD36B0DF1B99AAE200FB32CC /* reloadp.png */,
-				FD36B0E11B99AC0300FB32CC /* homepage.png */,
-				FD36B0E31B99AD4600FB32CC /* menubutton.png */,
 			);
 			name = gfx;
 			sourceTree = "<group>";
@@ -689,8 +671,6 @@
 			files = (
 				FD36B0CB1B993BFF00FB32CC /* newtab_p.png in Resources */,
 				3A3ED9E81225E3C2009E2908 /* BrowserWindow.xib in Resources */,
-				FD36B0BF1B98A9CD00FB32CC /* Toolbar.xib in Resources */,
-				FD36B0DE1B99AA5400FB32CC /* forward.png in Resources */,
 				3A3ED9E91225E3C2009E2908 /* TabContents.xib in Resources */,
 				3A3ED9EA1225E3C2009E2908 /* TabView.xib in Resources */,
 				3A3ED9EE1225E3C2009E2908 /* default-icon.pdf in Resources */,
@@ -698,14 +678,10 @@
 				3A3ED9EF1225E3C2009E2908 /* throbber_waiting.png in Resources */,
 				3A3ED9F01225E3C2009E2908 /* sadfavicon.png in Resources */,
 				3A3ED9F11225E3C2009E2908 /* throbber.png in Resources */,
-				FD36B0E41B99AD4600FB32CC /* menubutton.png in Resources */,
 				3A3EDAA91225F192009E2908 /* Localizable.strings in Resources */,
 				F1733CC0173B7D8400021BDE /* LICENSE in Resources */,
-				FD36B0E21B99AC0300FB32CC /* homepage.png in Resources */,
 				F1733CC1173B7D8400021BDE /* LICENSE-chromium in Resources */,
-				FD36B0C11B98AB5C00FB32CC /* backwards.png in Resources */,
 				FD36B0CA1B993BFF00FB32CC /* newtab_h.png in Resources */,
-				FD36B0E01B99AAE200FB32CC /* reloadp.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
