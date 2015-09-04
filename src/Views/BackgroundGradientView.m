@@ -25,9 +25,9 @@ static NSGradient *_mkGradient(BOOL faded) {
 	[base_color gtm_colorAdjustedFor:GTMColorationLightPenumbra
 							   faded:faded];
 	return [[NSGradient alloc] initWithColorsAndLocations:start_color, 0.0,
-			mid_color, 0.25,
+			mid_color, 0.5,
 			end_color, 0.5,
-			glow_color, 0.75,
+			glow_color, 0.5,
 			nil];
 }
 
