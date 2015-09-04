@@ -22,9 +22,6 @@
 		3A3ED9E81225E3C2009E2908 /* BrowserWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A286F9E1222CDBE00F1BB78 /* BrowserWindow.xib */; };
 		3A3ED9E91225E3C2009E2908 /* TabContents.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A286F9F1222CDBE00F1BB78 /* TabContents.xib */; };
 		3A3ED9EA1225E3C2009E2908 /* TabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A286FA01222CDBE00F1BB78 /* TabView.xib */; };
-		3A3ED9EB1225E3C2009E2908 /* newtab_h.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3A286FEA1222D61900F1BB78 /* newtab_h.pdf */; };
-		3A3ED9EC1225E3C2009E2908 /* newtab_p.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3A286FEB1222D61900F1BB78 /* newtab_p.pdf */; };
-		3A3ED9ED1225E3C2009E2908 /* newtab.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3A286FEC1222D61900F1BB78 /* newtab.pdf */; };
 		3A3ED9EE1225E3C2009E2908 /* default-icon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3A286FF71222D85300F1BB78 /* default-icon.pdf */; };
 		3A3ED9EF1225E3C2009E2908 /* throbber_waiting.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A286FFA1222D94600F1BB78 /* throbber_waiting.png */; };
 		3A3ED9F01225E3C2009E2908 /* sadfavicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A286FFD1222D99B00F1BB78 /* sadfavicon.png */; };
@@ -38,7 +35,6 @@
 		3A928BBC1226F0AA00DA7E43 /* MyBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A928BBB1226F0AA00DA7E43 /* MyBrowser.m */; };
 		3A928D0C12282DE500DA7E43 /* MyTabContents.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A928D0B12282DE500DA7E43 /* MyTabContents.m */; };
 		3A928F991228648F00DA7E43 /* common.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A1168C31225404F00757641 /* common.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3A92907612295BC400DA7E43 /* Toolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A92907512295BC400DA7E43 /* Toolbar.xib */; };
 		3A9291AA1229BF0100DA7E43 /* NSPasteboard+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A3ED6A11225CEB1009E2908 /* NSPasteboard+Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A9291AC1229BF0100DA7E43 /* NSString+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A3ED6A51225CEB1009E2908 /* NSString+Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A9291AD1229BF0100DA7E43 /* NSURL+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A3ED6A71225CEB1009E2908 /* NSURL+Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -110,6 +106,11 @@
 		65B60C461557CF12008B0072 /* ChromiumTabs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A3ED9831225E27E009E2908 /* ChromiumTabs.framework */; };
 		F1733CC0173B7D8400021BDE /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F1733CBE173B7D8400021BDE /* LICENSE */; };
 		F1733CC1173B7D8400021BDE /* LICENSE-chromium in Resources */ = {isa = PBXBuildFile; fileRef = F1733CBF173B7D8400021BDE /* LICENSE-chromium */; };
+		FD36B0BF1B98A9CD00FB32CC /* Toolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD36B0BE1B98A9CD00FB32CC /* Toolbar.xib */; };
+		FD36B0C11B98AB5C00FB32CC /* backwards.png in Resources */ = {isa = PBXBuildFile; fileRef = FD36B0C01B98AB5C00FB32CC /* backwards.png */; };
+		FD36B0C91B993BFF00FB32CC /* newtab.png in Resources */ = {isa = PBXBuildFile; fileRef = FD36B0C61B993BFF00FB32CC /* newtab.png */; };
+		FD36B0CA1B993BFF00FB32CC /* newtab_h.png in Resources */ = {isa = PBXBuildFile; fileRef = FD36B0C71B993BFF00FB32CC /* newtab_h.png */; };
+		FD36B0CB1B993BFF00FB32CC /* newtab_p.png in Resources */ = {isa = PBXBuildFile; fileRef = FD36B0C81B993BFF00FB32CC /* newtab_p.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,9 +149,6 @@
 		3A286F9E1222CDBE00F1BB78 /* BrowserWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrowserWindow.xib; sourceTree = "<group>"; };
 		3A286F9F1222CDBE00F1BB78 /* TabContents.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabContents.xib; sourceTree = "<group>"; };
 		3A286FA01222CDBE00F1BB78 /* TabView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabView.xib; sourceTree = "<group>"; };
-		3A286FEA1222D61900F1BB78 /* newtab_h.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = newtab_h.pdf; path = gfx/newtab_h.pdf; sourceTree = "<group>"; };
-		3A286FEB1222D61900F1BB78 /* newtab_p.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = newtab_p.pdf; path = gfx/newtab_p.pdf; sourceTree = "<group>"; };
-		3A286FEC1222D61900F1BB78 /* newtab.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = newtab.pdf; path = gfx/newtab.pdf; sourceTree = "<group>"; };
 		3A286FF71222D85300F1BB78 /* default-icon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "default-icon.pdf"; path = "gfx/default-icon.pdf"; sourceTree = "<group>"; };
 		3A286FFA1222D94600F1BB78 /* throbber_waiting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = throbber_waiting.png; path = gfx/throbber_waiting.png; sourceTree = "<group>"; };
 		3A286FFD1222D99B00F1BB78 /* sadfavicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sadfavicon.png; path = gfx/sadfavicon.png; sourceTree = "<group>"; };
@@ -185,7 +183,6 @@
 		3A928BBB1226F0AA00DA7E43 /* MyBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBrowser.m; sourceTree = "<group>"; };
 		3A928D0A12282DE500DA7E43 /* MyTabContents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTabContents.h; sourceTree = "<group>"; };
 		3A928D0B12282DE500DA7E43 /* MyTabContents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTabContents.m; sourceTree = "<group>"; };
-		3A92907512295BC400DA7E43 /* Toolbar.xib */ = {isa = PBXFileReference; explicitFileType = file.xib; path = Toolbar.xib; sourceTree = "<group>"; };
 		5A142BBD1540483D00E6B055 /* CTTabStripDragController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTabStripDragController.h; sourceTree = "<group>"; };
 		5A142BBE1540483D00E6B055 /* CTTabStripDragController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTTabStripDragController.m; sourceTree = "<group>"; };
 		5A163430153FEC1600B6D159 /* CTFloatingBarBackingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTFloatingBarBackingView.h; sourceTree = "<group>"; };
@@ -250,6 +247,11 @@
 		8D1107320486CEB800E47090 /* Chromium Tabs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chromium Tabs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1733CBE173B7D8400021BDE /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F1733CBF173B7D8400021BDE /* LICENSE-chromium */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "LICENSE-chromium"; path = "../LICENSE-chromium"; sourceTree = "<group>"; };
+		FD36B0BE1B98A9CD00FB32CC /* Toolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Toolbar.xib; sourceTree = "<group>"; };
+		FD36B0C01B98AB5C00FB32CC /* backwards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backwards.png; path = gfx/backwards.png; sourceTree = "<group>"; };
+		FD36B0C61B993BFF00FB32CC /* newtab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = newtab.png; path = gfx/newtab.png; sourceTree = "<group>"; };
+		FD36B0C71B993BFF00FB32CC /* newtab_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = newtab_h.png; path = gfx/newtab_h.png; sourceTree = "<group>"; };
+		FD36B0C81B993BFF00FB32CC /* newtab_p.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = newtab_p.png; path = gfx/newtab_p.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,10 +327,10 @@
 				3A286F9E1222CDBE00F1BB78 /* BrowserWindow.xib */,
 				3A286F9F1222CDBE00F1BB78 /* TabContents.xib */,
 				3A286FA01222CDBE00F1BB78 /* TabView.xib */,
-				3A92907512295BC400DA7E43 /* Toolbar.xib */,
 				3A3EDAA71225F192009E2908 /* Localizable.strings */,
 				F1733CBE173B7D8400021BDE /* LICENSE */,
 				F1733CBF173B7D8400021BDE /* LICENSE-chromium */,
+				FD36B0BE1B98A9CD00FB32CC /* Toolbar.xib */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -348,13 +350,14 @@
 		3A286FF01222D61D00F1BB78 /* gfx */ = {
 			isa = PBXGroup;
 			children = (
+				FD36B0C61B993BFF00FB32CC /* newtab.png */,
+				FD36B0C71B993BFF00FB32CC /* newtab_h.png */,
+				FD36B0C81B993BFF00FB32CC /* newtab_p.png */,
+				FD36B0C01B98AB5C00FB32CC /* backwards.png */,
 				3A3ED35012256F06009E2908 /* throbber.png */,
 				3A286FFD1222D99B00F1BB78 /* sadfavicon.png */,
 				3A286FFA1222D94600F1BB78 /* throbber_waiting.png */,
 				3A286FF71222D85300F1BB78 /* default-icon.pdf */,
-				3A286FEA1222D61900F1BB78 /* newtab_h.pdf */,
-				3A286FEB1222D61900F1BB78 /* newtab_p.pdf */,
-				3A286FEC1222D61900F1BB78 /* newtab.pdf */,
 			);
 			name = gfx;
 			sourceTree = "<group>";
@@ -665,20 +668,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD36B0CB1B993BFF00FB32CC /* newtab_p.png in Resources */,
 				3A3ED9E81225E3C2009E2908 /* BrowserWindow.xib in Resources */,
+				FD36B0BF1B98A9CD00FB32CC /* Toolbar.xib in Resources */,
 				3A3ED9E91225E3C2009E2908 /* TabContents.xib in Resources */,
 				3A3ED9EA1225E3C2009E2908 /* TabView.xib in Resources */,
-				3A3ED9EB1225E3C2009E2908 /* newtab_h.pdf in Resources */,
-				3A3ED9EC1225E3C2009E2908 /* newtab_p.pdf in Resources */,
-				3A3ED9ED1225E3C2009E2908 /* newtab.pdf in Resources */,
 				3A3ED9EE1225E3C2009E2908 /* default-icon.pdf in Resources */,
+				FD36B0C91B993BFF00FB32CC /* newtab.png in Resources */,
 				3A3ED9EF1225E3C2009E2908 /* throbber_waiting.png in Resources */,
 				3A3ED9F01225E3C2009E2908 /* sadfavicon.png in Resources */,
 				3A3ED9F11225E3C2009E2908 /* throbber.png in Resources */,
 				3A3EDAA91225F192009E2908 /* Localizable.strings in Resources */,
-				3A92907612295BC400DA7E43 /* Toolbar.xib in Resources */,
 				F1733CC0173B7D8400021BDE /* LICENSE in Resources */,
 				F1733CC1173B7D8400021BDE /* LICENSE-chromium in Resources */,
+				FD36B0C11B98AB5C00FB32CC /* backwards.png in Resources */,
+				FD36B0CA1B993BFF00FB32CC /* newtab_h.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -817,7 +821,7 @@
 				HEADER_SEARCH_PATHS = src;
 				INFOPLIST_FILE = "resources/ChromiumTabs-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = ChromiumTabs;
 				SDKROOT = macosx;
 			};
@@ -858,7 +862,7 @@
 				HEADER_SEARCH_PATHS = src;
 				INFOPLIST_FILE = "resources/ChromiumTabs-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
