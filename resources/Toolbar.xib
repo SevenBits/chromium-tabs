@@ -25,10 +25,10 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button id="Ppg-cL-Vnt" customClass="ToolBarButton">
-                    <rect key="frame" x="33" y="-7" width="48" height="48"/>
+                <button id="Ppg-cL-Vnt" customClass="ToolbarButton">
+                    <rect key="frame" x="6" y="3" width="29" height="29"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="backwards" imagePosition="only" alignment="center" controlSize="small" imageScaling="proportionallyDown" inset="2" id="fuC-Bk-nSl">
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="backwards" imagePosition="overlaps" alignment="center" controlSize="small" imageScaling="proportionallyUpOrDown" inset="2" id="fuC-Bk-nSl">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="smallSystem"/>
                     </buttonCell>
@@ -38,6 +38,6 @@
         <userDefaultsController representsSharedInstance="YES" id="130"/>
     </objects>
     <resources>
-        <image name="backwards" width="48" height="45"/>
+        <image name="backwards" width="75" height="75"/>
     </resources>
 </document>

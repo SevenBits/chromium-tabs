@@ -111,6 +111,8 @@
 		FD36B0C91B993BFF00FB32CC /* newtab.png in Resources */ = {isa = PBXBuildFile; fileRef = FD36B0C61B993BFF00FB32CC /* newtab.png */; };
 		FD36B0CA1B993BFF00FB32CC /* newtab_h.png in Resources */ = {isa = PBXBuildFile; fileRef = FD36B0C71B993BFF00FB32CC /* newtab_h.png */; };
 		FD36B0CB1B993BFF00FB32CC /* newtab_p.png in Resources */ = {isa = PBXBuildFile; fileRef = FD36B0C81B993BFF00FB32CC /* newtab_p.png */; };
+		FD36B0DB1B999BDD00FB32CC /* ToolbarButton.h in Headers */ = {isa = PBXBuildFile; fileRef = FD36B0D91B999BDD00FB32CC /* ToolbarButton.h */; };
+		FD36B0DC1B999BDD00FB32CC /* ToolbarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FD36B0DA1B999BDD00FB32CC /* ToolbarButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -252,6 +254,8 @@
 		FD36B0C61B993BFF00FB32CC /* newtab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = newtab.png; path = gfx/newtab.png; sourceTree = "<group>"; };
 		FD36B0C71B993BFF00FB32CC /* newtab_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = newtab_h.png; path = gfx/newtab_h.png; sourceTree = "<group>"; };
 		FD36B0C81B993BFF00FB32CC /* newtab_p.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = newtab_p.png; path = gfx/newtab_p.png; sourceTree = "<group>"; };
+		FD36B0D91B999BDD00FB32CC /* ToolbarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolbarButton.h; sourceTree = "<group>"; };
+		FD36B0DA1B999BDD00FB32CC /* ToolbarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolbarButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -506,6 +510,8 @@
 				5AE304FB153F0D41001FCF20 /* HoverCloseButton.m */,
 				5AE304FC153F0D41001FCF20 /* NewTabButton.h */,
 				5AE304FD153F0D41001FCF20 /* NewTabButton.m */,
+				FD36B0D91B999BDD00FB32CC /* ToolbarButton.h */,
+				FD36B0DA1B999BDD00FB32CC /* ToolbarButton.m */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -580,6 +586,7 @@
 				5AE30500153F0D41001FCF20 /* HoverCloseButton.h in Headers */,
 				5AE30502153F0D41001FCF20 /* NewTabButton.h in Headers */,
 				5AE3050C153F0D8E001FCF20 /* BackgroundGradientView.h in Headers */,
+				FD36B0DB1B999BDD00FB32CC /* ToolbarButton.h in Headers */,
 				5AE3050E153F0D8E001FCF20 /* FastResizeView.h in Headers */,
 				5AE30510153F0D8E001FCF20 /* ThrobberView.h in Headers */,
 				5AE30516153F0DB2001FCF20 /* URLDropTarget.h in Headers */,
@@ -713,6 +720,7 @@
 				5AE304B7153F0AFA001FCF20 /* CTToolbarView.m in Sources */,
 				5AE304BE153F0B78001FCF20 /* CTTabStripController.m in Sources */,
 				5AE304C0153F0B78001FCF20 /* CTTabStripView.m in Sources */,
+				FD36B0DC1B999BDD00FB32CC /* ToolbarButton.m in Sources */,
 				5AE304C6153F0C17001FCF20 /* CTTabStripModel.m in Sources */,
 				5AE304C8153F0C17001FCF20 /* CTTabStripModelOrderController.m in Sources */,
 				5AE304D7153F0C8C001FCF20 /* CTBrowser.m in Sources */,
