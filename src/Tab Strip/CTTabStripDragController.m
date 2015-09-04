@@ -242,55 +242,55 @@ const NSTimeInterval kTearDuration = 0.333;
 		}
 	}
 	
-	// Create or identify the dragged controller.
-	if (!draggedController_) {
-		// Get rid of any placeholder remaining in the original source window.
-		[sourceController_ removePlaceholder];
-		
-		// Detach from the current window and put it in a new window. If there are
-		// no more tabs remaining after detaching, the source window is about to
-		// go away (it's been autoreleased) so we need to ensure we don't reference
-		// it any more. In that case the new controller becomes our source
-		// controller.
-		draggedController_ =
-        [sourceController_ detachTabToNewWindow:[draggedTab_ tabView]];
-		dragWindow_ = [draggedController_ window];
-		[dragWindow_ setAlphaValue:0.0];
-		if (![sourceController_ hasLiveTabs]) {
-			sourceController_ = draggedController_;
-			sourceWindow_ = dragWindow_;
-		}
-		
-		// Disable window animation before calling |orderFront:| when detatching
-		// to a new window.
-		NSWindowAnimationBehavior savedAnimationBehavior =
-        NSWindowAnimationBehaviorDefault;
-		BOOL didSaveAnimationBehavior = NO;
-		if ([dragWindow_ respondsToSelector:@selector(animationBehavior)] &&
-			[dragWindow_ respondsToSelector:@selector(setAnimationBehavior:)]) {
-			didSaveAnimationBehavior = YES;
-			savedAnimationBehavior = [dragWindow_ animationBehavior];
-			[dragWindow_ setAnimationBehavior:NSWindowAnimationBehaviorNone];
-		}
-		
-		// If dragging the tab only moves the current window, do not show overlay
-		// so that sheets stay on top of the window.
-		// Bring the target window to the front and make sure it has a border.
-		[dragWindow_ setLevel:NSFloatingWindowLevel];
-		[dragWindow_ setHasShadow:YES];
-		[dragWindow_ orderFront:nil];
-		[dragWindow_ makeMainWindow];
-		[draggedController_ showOverlay];
-		dragOverlay_ = [draggedController_ overlayWindow];
-		// Force the new tab button to be hidden. We'll reset it on mouse up.
-		[draggedController_ setShowsNewTabButton:NO];
-		tearTime_ = [NSDate timeIntervalSinceReferenceDate];
-		tearOrigin_ = sourceWindowFrame_.origin;
-		
-		// Restore window animation behavior.
-		if (didSaveAnimationBehavior)
-			[dragWindow_ setAnimationBehavior:savedAnimationBehavior];
-	}
+//	// Create or identify the dragged controller.
+//	if (!draggedController_) {
+//		// Get rid of any placeholder remaining in the original source window.
+//		[sourceController_ removePlaceholder];
+//		
+//		// Detach from the current window and put it in a new window. If there are
+//		// no more tabs remaining after detaching, the source window is about to
+//		// go away (it's been autoreleased) so we need to ensure we don't reference
+//		// it any more. In that case the new controller becomes our source
+//		// controller.
+//		draggedController_ =
+//        [sourceController_ detachTabToNewWindow:[draggedTab_ tabView]];
+//		dragWindow_ = [draggedController_ window];
+//		[dragWindow_ setAlphaValue:0.0];
+//		if (![sourceController_ hasLiveTabs]) {
+//			sourceController_ = draggedController_;
+//			sourceWindow_ = dragWindow_;
+//		}
+//		
+//		// Disable window animation before calling |orderFront:| when detatching
+//		// to a new window.
+//		NSWindowAnimationBehavior savedAnimationBehavior =
+//        NSWindowAnimationBehaviorDefault;
+//		BOOL didSaveAnimationBehavior = NO;
+//		if ([dragWindow_ respondsToSelector:@selector(animationBehavior)] &&
+//			[dragWindow_ respondsToSelector:@selector(setAnimationBehavior:)]) {
+//			didSaveAnimationBehavior = YES;
+//			savedAnimationBehavior = [dragWindow_ animationBehavior];
+//			[dragWindow_ setAnimationBehavior:NSWindowAnimationBehaviorNone];
+//		}
+//		
+//		// If dragging the tab only moves the current window, do not show overlay
+//		// so that sheets stay on top of the window.
+//		// Bring the target window to the front and make sure it has a border.
+//		[dragWindow_ setLevel:NSFloatingWindowLevel];
+//		[dragWindow_ setHasShadow:YES];
+//		[dragWindow_ orderFront:nil];
+//		[dragWindow_ makeMainWindow];
+//		[draggedController_ showOverlay];
+//		dragOverlay_ = [draggedController_ overlayWindow];
+//		// Force the new tab button to be hidden. We'll reset it on mouse up.
+//		[draggedController_ setShowsNewTabButton:NO];
+//		tearTime_ = [NSDate timeIntervalSinceReferenceDate];
+//		tearOrigin_ = sourceWindowFrame_.origin;
+//		
+//		// Restore window animation behavior.
+//		if (didSaveAnimationBehavior)
+//			[dragWindow_ setAnimationBehavior:savedAnimationBehavior];
+//	}
 	
 	// TODO(pinkerton): http://crbug.com/25682 demonstrates a way to get here by
 	// some weird circumstance that doesn't first go through mouseDown:. We
