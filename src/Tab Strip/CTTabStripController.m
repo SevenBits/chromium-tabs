@@ -650,6 +650,7 @@ const NSTimeInterval kAnimationDuration = 0.125;
 	if ([tabStripModel_ containsIndex:index])
 		[tabStripModel_ selectTabContentsAtIndex:index
 									 userGesture:YES];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"BLChangeURL" object:nil userInfo:nil];
 }
 
 // Called when the user closes a tab. Asks the model to close the tab. |sender|
