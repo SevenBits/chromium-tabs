@@ -269,4 +269,12 @@ const NSInteger CTWindowButtonsWithoutTabStripOffsetFromLeft = 8;
 		return NSMakePoint(0, 0);
 	return [delegate themePatternPhase];
 }
+
+-(void)selectPreviousKeyView:(id)sender{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"BLSelectPrevView" object:nil];
+}
+
+-(void)selectNextKeyView:(id)sender{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"BLSelectNextView" object:nil];
+}
 @end
