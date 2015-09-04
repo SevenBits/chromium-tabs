@@ -37,7 +37,7 @@ static NSImage* kDefaultIconImage = nil;
 const CGFloat kUseFullAvailableWidth = -1.0;
 
 // The amount by which tabs overlap.
-const CGFloat kTabOverlap = 19.0;
+const CGFloat kTabOverlap = 13.0;
 
 // The amount by which mini tabs are separated from normal tabs.
 const CGFloat kLastMiniTabSpacing = 3.0;
@@ -46,7 +46,7 @@ const CGFloat kLastMiniTabSpacing = 3.0;
 const CGFloat kIconWidthAndHeight = 16.0;
 
 // The amount by which the new tab button is offset (from the tabs).
-const CGFloat kNewTabButtonOffset = 8.0;
+const CGFloat kNewTabButtonOffset = 6.0;
 
 // Time (in seconds) in which tabs animate to their final position.
 const NSTimeInterval kAnimationDuration = 0.125;
