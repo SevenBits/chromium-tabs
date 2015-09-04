@@ -16,28 +16,64 @@
             <rect key="frame" x="0.0" y="0.0" width="608" height="34"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField verticalHuggingPriority="750" id="225">
-                    <rect key="frame" x="17" y="7" width="574" height="17"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingMiddle" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="test" id="226">
-                        <font key="font" metaFont="smallSystem"/>
-                        <color key="textColor" red="0.2282608696" green="0.2282608696" blue="0.2282608696" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
                 <button id="Ppg-cL-Vnt" customClass="ToolbarButton">
                     <rect key="frame" x="6" y="3" width="29" height="29"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                     <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="backwards" imagePosition="overlaps" alignment="center" controlSize="small" imageScaling="proportionallyUpOrDown" inset="2" id="fuC-Bk-nSl">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="smallSystem"/>
                     </buttonCell>
                 </button>
+                <button id="ehx-oJ-lGY" customClass="ToolbarButton">
+                    <rect key="frame" x="34" y="3" width="29" height="29"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="forward" imagePosition="overlaps" alignment="center" controlSize="small" imageScaling="proportionallyUpOrDown" inset="2" id="ZUR-yw-yyv">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                </button>
+                <button id="lBR-rk-rmJ" customClass="ToolbarButton">
+                    <rect key="frame" x="62" y="3" width="29" height="29"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="reloadp" imagePosition="overlaps" alignment="center" controlSize="small" imageScaling="proportionallyUpOrDown" inset="2" id="4yH-bQ-whF">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                </button>
+                <button id="wvf-9U-we3" customClass="ToolbarButton">
+                    <rect key="frame" x="90" y="3" width="29" height="29"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="homepage" imagePosition="overlaps" alignment="center" controlSize="small" imageScaling="proportionallyUpOrDown" inset="2" id="7Cf-sO-fST">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                </button>
+                <button id="Wqv-aY-Hu9" customClass="ToolbarButton">
+                    <rect key="frame" x="574" y="3" width="29" height="29"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="menubutton" imagePosition="overlaps" alignment="center" controlSize="small" imageScaling="proportionallyUpOrDown" inset="2" id="ISX-MP-H8C">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                </button>
+                <textField verticalHuggingPriority="750" id="Wfb-Je-aPV">
+                    <rect key="frame" x="127" y="5" width="439" height="25"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" usesSingleLineMode="YES" bezelStyle="round" id="GJz-k7-BkD">
+                        <font key="font" metaFont="cellTitle"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
         </customView>
         <userDefaultsController representsSharedInstance="YES" id="130"/>
     </objects>
     <resources>
         <image name="backwards" width="75" height="75"/>
+        <image name="forward" width="75" height="75"/>
+        <image name="homepage" width="75" height="75"/>
+        <image name="menubutton" width="75" height="75"/>
+        <image name="reloadp" width="75" height="75"/>
     </resources>
 </document>
