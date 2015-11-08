@@ -48,8 +48,12 @@
 	// |checkImageState| call will crash.
 	// http://crbug.com/28220
 	//  scoped_nsobject<HoverButton> myself([self retain]);
+    if([super respondsToSelector:@selector(mouseDown:)]){
+        [super mouseDown:theEvent];
+    }else{
+        return;
+    }
 	
-	[super mouseDown:theEvent];
 	// We need to check the image state after the mouseDown event loop finishes.
 	// It's possible that we won't get a mouseExited event if the button was
 	// moved under the mouse during tab resize, instead of the mouse moving over
