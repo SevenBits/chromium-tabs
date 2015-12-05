@@ -687,7 +687,7 @@ const NSTimeInterval kAnimationDuration = 0.125;
 									 closeTypes:CLOSE_USER_GESTURE |
 		 CLOSE_CREATE_HISTORICAL_TAB];
         if(isClosingLastTab){
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"BLChangeURL" object:nil userInfo:nil];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"BLChangeURL" object:@"" userInfo:nil];
         }
 	} else {
 		// Use the standard window close if this is the last tab
