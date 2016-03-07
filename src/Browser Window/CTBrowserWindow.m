@@ -46,6 +46,9 @@ const NSInteger CTWindowButtonsWithoutTabStripOffsetFromLeft = 8;
 }
 @synthesize windowButtonsInterButtonSpacing = windowButtonsInterButtonSpacing_;
 
+- (BOOL)canBecomeMainWindow{
+    return YES;
+}
 - (id)initWithContentRect:(NSRect)contentRect
                 styleMask:(NSUInteger)aStyle
                   backing:(NSBackingStoreType)bufferingType
