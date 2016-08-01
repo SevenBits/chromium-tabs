@@ -1355,8 +1355,8 @@ const NSTimeInterval kAnimationDuration = 0.125;
 	}
 	
 	if (hoveredTab_ != tabView) {
-		[hoveredTab_ mouseExited:nil];  // We don't pass event because moved events
-		[tabView mouseEntered:nil];  // don't have valid tracking areas
+		[hoveredTab_ mouseExited:[NSEvent new]];  // We don't pass event because moved events
+		[tabView mouseEntered:[NSEvent new]];  // don't have valid tracking areas
 		hoveredTab_ = tabView;
 	} else {
 		[hoveredTab_ mouseMoved:event];
