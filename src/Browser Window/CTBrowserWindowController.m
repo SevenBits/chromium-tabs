@@ -828,7 +828,7 @@ static CTBrowserWindowController* _currentMain = nil; // weak
 	// Lay out the presentation mode toggle button at the very top of the
 	// tab strip.
 	if ([self shouldShowPresentationModeToggle]) {
-		[self createAndInstallPresentationModeToggleButton];
+		//[self createAndInstallPresentationModeToggleButton];
 		
 		NSPoint origin =
         NSMakePoint(maxX - NSWidth([presentationModeToggleButton_ frame]),
