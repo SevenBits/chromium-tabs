@@ -115,15 +115,6 @@ const NSInteger CTWindowButtonsWithoutTabStripOffsetFromLeft = 8;
 }
 
 - (void)postResizeEvent{
-    NSButton *presentationModeToggleButton_ = [[NSButton alloc] initWithFrame:NSMakeRect(0, 0, 25, 25)];
-    [presentationModeToggleButton_ setButtonType:NSMomentaryLightButton];
-    [presentationModeToggleButton_ setBezelStyle:NSRegularSquareBezelStyle];
-    [presentationModeToggleButton_ setBordered:NO];
-    [[presentationModeToggleButton_ cell] setHighlightsBy:NSContentsCellMask];
-    [[presentationModeToggleButton_ cell] setShowsStateBy:NSContentsCellMask];
-    [presentationModeToggleButton_ setImage:[NSImage imageNamed:NSImageNameIChatTheaterTemplate]];
-    [presentationModeToggleButton_ setTarget:self];
-    [[[self contentView] superview] addSubview:presentationModeToggleButton_];
     [self adjustButton:closeButton_
                 ofKind:NSWindowCloseButton];
     [self adjustButton:miniaturizeButton_
