@@ -688,9 +688,7 @@ const NSTimeInterval kAnimationDuration = 0.125;
 		 CLOSE_CREATE_HISTORICAL_TAB];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"BLChangeURL" object:nil userInfo:nil];
 	} else {
-		// Use the standard window close if this is the last tab
-		// this prevents the tab from being removed from the model until after
-		// the window dissapears
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"BLChangeURL" object:@"LastTab" userInfo:nil];
 		[[tabStripView_ window] performClose:nil];
 	}
 }
