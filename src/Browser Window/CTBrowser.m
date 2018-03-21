@@ -224,9 +224,13 @@
 
 - (void)closeTab {
 	if ([self canCloseTab]) {
-		[tabStripModel_ closeTabContentsAtIndex:tabStripModel_.activeIndex 
-									 closeTypes:CLOSE_USER_GESTURE |
-		 CLOSE_CREATE_HISTORICAL_TAB];
+        if([self tabCount] > 1){
+            [tabStripModel_ closeTabContentsAtIndex:tabStripModel_.activeIndex
+                                         closeTypes:CLOSE_USER_GESTURE |
+             CLOSE_CREATE_HISTORICAL_TAB];
+        }else{
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"BLChangeURL" object:@"LastTab" userInfo:nil];
+        }
 	}
 }
 
