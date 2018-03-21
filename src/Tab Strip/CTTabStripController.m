@@ -686,9 +686,7 @@ const NSTimeInterval kAnimationDuration = 0.125;
 		[tabStripModel_ closeTabContentsAtIndex:index 
 									 closeTypes:CLOSE_USER_GESTURE |
 		 CLOSE_CREATE_HISTORICAL_TAB];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"BLChangeURL" object:nil userInfo:nil];
 	} else {
-		[[NSNotificationCenter defaultCenter] postNotificationName:@"BLChangeURL" object:@"LastTab" userInfo:nil];
 		[[tabStripView_ window] performClose:nil];
 	}
 }
