@@ -132,7 +132,7 @@ NSString* const CTTabForegroundUserInfoKey = @"CTTabForegroundUserInfoKey";
 NSString* const CTTabUserGestureUserInfoKey = @"CTTaUserGestureUserInfoKey";
 NSString* const CTTabOptionsUserInfoKey = @"CTTaOptionsInfoKey";
 
-const int kNoTab = NSNotFound;
+const int kNoTab = (const int)NSNotFound;
 
 - (id)initWithDelegate:(NSObject <CTTabStripModelDelegate>*)delegate {
 	self = [super init];

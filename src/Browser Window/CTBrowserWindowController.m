@@ -274,16 +274,6 @@ static CTBrowserWindowController* _currentMain = nil; // weak
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-
--(void)finalize {
-	if (_currentMain == self) {
-		//    ct_casid(&_currentMain, nil);
-		_currentMain = nil;
-	}
-	[[NSNotificationCenter defaultCenter] removeObserver:self];
-	[super finalize];
-}
-
 - (BOOL)hasToolbar {
 	return !!toolbarController_;
 }
