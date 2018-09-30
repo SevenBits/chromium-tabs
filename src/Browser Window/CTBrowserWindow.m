@@ -111,6 +111,7 @@ const NSInteger CTWindowButtonsWithoutTabStripOffsetFromLeft = 8;
     [[presentationModeToggleButton_ cell] setShowsStateBy:NSContentsCellMask];
     [presentationModeToggleButton_ setImage:[NSImage imageNamed:NSImageNameIChatTheaterTemplate]];
     [presentationModeToggleButton_ setTarget:self];
+    [presentationModeToggleButton_ setHidden:YES];
     [[[self contentView] superview] addSubview:presentationModeToggleButton_];
 }
 
