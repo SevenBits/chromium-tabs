@@ -87,8 +87,14 @@ const CGFloat kRapidCloseDist = 2.5;
 	self = [super initWithFrame:frame];
 	if (self) {
 		[self setShowsDivider:NO];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabSwitched) name:@"BLChangeURL" object:nil];
 	}
 	return self;
+}
+
+- (void)tabSwitched {
+    [self resetLastGlowUpdateTime];
+    [self adjustGlowValue];
 }
 
 - (void)awakeFromNib {
@@ -96,6 +102,7 @@ const CGFloat kRapidCloseDist = 2.5;
 }
 
 - (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 	// Cancel any delayed requests that may still be pending (drags or hover).
 	[NSObject cancelPreviousPerformRequestsWithTarget:self];
 }

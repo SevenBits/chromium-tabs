@@ -448,7 +448,7 @@ const CGFloat kFloatingBarVerticalOffset = 22;
 }
 
 - (BOOL)shouldToggleMenuBar {
-	return NO && [self isWindowOnPrimaryScreen] && [[browserController_ window] isMainWindow];
+	return NO;
 }
 
 - (FullScreenMode)desiredSystemFullscreenMode {
