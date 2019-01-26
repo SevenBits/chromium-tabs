@@ -11,4 +11,10 @@
       initWithBaseTabContents:baseContents];
 }
 
+// This needs to return a toolbar controller initialized with a nib.
+// Since we have no toolbar we can return nil for now.
+- (CTToolbarController *)createToolbarController {
+	return nil;
+}
+
 @end
