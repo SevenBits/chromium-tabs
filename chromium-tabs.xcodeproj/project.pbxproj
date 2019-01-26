@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24485ABE21FBEC9C00B5B92D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24485ABD21FBEC9C00B5B92D /* Assets.xcassets */; };
+		24485AC921FBECE300B5B92D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3EDA771225EBBB009E2908 /* main.m */; };
+		24485ACA21FBECE500B5B92D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3EDA711225EBBB009E2908 /* AppDelegate.m */; };
+		24485ACB21FBECE700B5B92D /* MyBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A928BBB1226F0AA00DA7E43 /* MyBrowser.m */; };
+		24485ACC21FBECEA00B5B92D /* MyTabContents.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A928D0B12282DE500DA7E43 /* MyTabContents.m */; };
+		24485ACE21FBED8600B5B92D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A3EDA741225EBBB009E2908 /* MainMenu.xib */; };
+		24485AD421FBEE9D00B5B92D /* ChromiumTabs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A3ED9831225E27E009E2908 /* ChromiumTabs.framework */; };
+		24485AD521FBEE9D00B5B92D /* ChromiumTabs.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A3ED9831225E27E009E2908 /* ChromiumTabs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3A3ED9BE1225E320009E2908 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		3A3ED9BF1225E320009E2908 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A286EA51222C8EA00F1BB78 /* Carbon.framework */; };
 		3A3ED9C01225E320009E2908 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A3ED9751225E0A7009E2908 /* QuartzCore.framework */; };
@@ -105,9 +113,37 @@
 		FD36B0DC1B999BDD00FB32CC /* ToolbarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FD36B0DA1B999BDD00FB32CC /* ToolbarButton.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		24485AD621FBEE9D00B5B92D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A3ED9821225E27E009E2908;
+			remoteInfo = ChromiumTabs;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		24485AD821FBEE9D00B5B92D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				24485AD521FBEE9D00B5B92D /* ChromiumTabs.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		24485AB321FBEB4100B5B92D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		24485AB821FBEC9B00B5B92D /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		24485ABD21FBEC9C00B5B92D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		24485AC221FBEC9C00B5B92D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24485AC521FBEC9C00B5B92D /* SampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SampleApp.entitlements; sourceTree = "<group>"; };
 		256AC3F00F4B6AF500CF3369 /* prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prefix.pch; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -143,7 +179,6 @@
 		3A3EDA701225EBBB009E2908 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3A3EDA711225EBBB009E2908 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3A3EDA731225EBBB009E2908 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3A3EDA761225EBBB009E2908 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A3EDA771225EBBB009E2908 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3A3EDAA81225F192009E2908 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3A928A771226E01900DA7E43 /* prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prefix.pch; sourceTree = "<group>"; };
@@ -222,6 +257,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		24485AB521FBEC9B00B5B92D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24485AD421FBEE9D00B5B92D /* ChromiumTabs.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3A3ED9811225E27E009E2908 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -260,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				3A3ED9831225E27E009E2908 /* ChromiumTabs.framework */,
+				24485AB821FBEC9B00B5B92D /* SampleApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -364,6 +408,7 @@
 		3A3EDA6E1225EBBB009E2908 /* examples */ = {
 			isa = PBXGroup;
 			children = (
+				24485ABD21FBEC9C00B5B92D /* Assets.xcassets */,
 				3A928A771226E01900DA7E43 /* prefix.pch */,
 				3A3EDA6F1225EBBB009E2908 /* simple-app */,
 			);
@@ -374,8 +419,8 @@
 			isa = PBXGroup;
 			children = (
 				3A3EDA721225EBBB009E2908 /* InfoPlist.strings */,
+				24485AC221FBEC9C00B5B92D /* Info.plist */,
 				3A3EDA741225EBBB009E2908 /* MainMenu.xib */,
-				3A3EDA761225EBBB009E2908 /* Info.plist */,
 				3A3EDA771225EBBB009E2908 /* main.m */,
 				3A3EDA701225EBBB009E2908 /* AppDelegate.h */,
 				3A3EDA711225EBBB009E2908 /* AppDelegate.m */,
@@ -383,6 +428,7 @@
 				3A928BBB1226F0AA00DA7E43 /* MyBrowser.m */,
 				3A928D0A12282DE500DA7E43 /* MyTabContents.h */,
 				3A928D0B12282DE500DA7E43 /* MyTabContents.m */,
+				24485AC521FBEC9C00B5B92D /* SampleApp.entitlements */,
 			);
 			path = "simple-app";
 			sourceTree = "<group>";
@@ -554,6 +600,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		24485AB721FBEC9B00B5B92D /* SampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24485AC621FBEC9C00B5B92D /* Build configuration list for PBXNativeTarget "SampleApp" */;
+			buildPhases = (
+				24485AB421FBEC9B00B5B92D /* Sources */,
+				24485AB521FBEC9B00B5B92D /* Frameworks */,
+				24485AB621FBEC9B00B5B92D /* Resources */,
+				24485AD821FBEE9D00B5B92D /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				24485AD721FBEE9D00B5B92D /* PBXTargetDependency */,
+			);
+			name = SampleApp;
+			productName = SampleApp;
+			productReference = 24485AB821FBEC9B00B5B92D /* SampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 		3A3ED9821225E27E009E2908 /* ChromiumTabs */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A3ED9871225E27F009E2908 /* Build configuration list for PBXNativeTarget "ChromiumTabs" */;
@@ -580,6 +645,16 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1000;
+				TargetAttributes = {
+					24485AB721FBEC9B00B5B92D = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = 8PA6GA85US;
+						ProvisioningStyle = Automatic;
+					};
+					3A3ED9821225E27E009E2908 = {
+						DevelopmentTeam = 8PA6GA85US;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "chromium-tabs" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -597,11 +672,21 @@
 			projectRoot = "";
 			targets = (
 				3A3ED9821225E27E009E2908 /* ChromiumTabs */,
+				24485AB721FBEC9B00B5B92D /* SampleApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		24485AB621FBEC9B00B5B92D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24485ABE21FBEC9C00B5B92D /* Assets.xcassets in Resources */,
+				24485ACE21FBED8600B5B92D /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3A3ED97F1225E27E009E2908 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -625,6 +710,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		24485AB421FBEC9B00B5B92D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24485AC921FBECE300B5B92D /* main.m in Sources */,
+				24485ACA21FBECE500B5B92D /* AppDelegate.m in Sources */,
+				24485ACB21FBECE700B5B92D /* MyBrowser.m in Sources */,
+				24485ACC21FBECEA00B5B92D /* MyTabContents.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3A3ED9801225E27E009E2908 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -672,6 +768,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		24485AD721FBEE9D00B5B92D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A3ED9821225E27E009E2908 /* ChromiumTabs */;
+			targetProxy = 24485AD621FBEE9D00B5B92D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		3A3EDA721225EBBB009E2908 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -700,13 +804,93 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		24485AC721FBEC9C00B5B92D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "examples/simple-app/SampleApp.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 8PA6GA85US;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "examples/simple-app/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.sevenbits.SampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		24485AC821FBEC9C00B5B92D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "examples/simple-app/SampleApp.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 8PA6GA85US;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "examples/simple-app/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.sevenbits.SampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		3A3ED9851225E27F009E2908 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 8PA6GA85US;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -742,9 +926,11 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = NO;
+				DEVELOPMENT_TEAM = 8PA6GA85US;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -861,6 +1047,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		24485AC621FBEC9C00B5B92D /* Build configuration list for PBXNativeTarget "SampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24485AC721FBEC9C00B5B92D /* Debug */,
+				24485AC821FBEC9C00B5B92D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3A3ED9871225E27F009E2908 /* Build configuration list for PBXNativeTarget "ChromiumTabs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
