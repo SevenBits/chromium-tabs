@@ -76,14 +76,7 @@ const NSInteger CTWindowButtonsWithoutTabStripOffsetFromLeft = 8;
 		
         windowButtonsInterButtonSpacing_ =
         NSMinX([miniaturizeButton_ frame]) - NSMaxX([closeButton_ frame]);
-        
-        
-        // The Notification NOT WORKING on 10.13
-        // But if you add an invisible button on the tab bar, a warning will be printed to console.
-        // Then everything working again....
-        [self performSelector:@selector(doSomeFuckingWorkaround) withObject:nil afterDelay:0.4];
-        [self performSelector:@selector(postResizeEvent) withObject:nil afterDelay:0.8];
-        
+
 		NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
 		[center addObserver:self
 				   selector:@selector(adjustCloseButton:)
@@ -97,21 +90,12 @@ const NSInteger CTWindowButtonsWithoutTabStripOffsetFromLeft = 8;
 				   selector:@selector(adjustZoomButton:)
 					   name:NSViewFrameDidChangeNotification
 					 object:zoomButton_];
+
+		// On macOS 10.14 (and perhaps earlier) we don't key when the
+		// window is created.
+		[self makeKeyAndOrderFront:nil];
 	}
 	return self;
-}
-
-- (void)doSomeFuckingWorkaround{
-    NSButton *presentationModeToggleButton_ = [[NSButton alloc] initWithFrame:NSMakeRect(0, 0, 25, 25)];
-    [presentationModeToggleButton_ setButtonType:NSMomentaryLightButton];
-    [presentationModeToggleButton_ setBezelStyle:NSRegularSquareBezelStyle];
-    [presentationModeToggleButton_ setBordered:NO];
-    [[presentationModeToggleButton_ cell] setHighlightsBy:NSContentsCellMask];
-    [[presentationModeToggleButton_ cell] setShowsStateBy:NSContentsCellMask];
-    [presentationModeToggleButton_ setImage:[NSImage imageNamed:NSImageNameIChatTheaterTemplate]];
-    [presentationModeToggleButton_ setTarget:self];
-    [presentationModeToggleButton_ setHidden:YES];
-    [[[self contentView] superview] addSubview:presentationModeToggleButton_];
 }
 
 - (void)postResizeEvent{

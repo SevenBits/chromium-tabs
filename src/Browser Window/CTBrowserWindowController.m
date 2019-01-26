@@ -735,6 +735,8 @@ static CTBrowserWindowController* _currentMain = nil; // weak
 	// Suppress title drawing (the title is in the tab, baby)
 	if ([window respondsToSelector:@selector(setShouldHideTitle:)])
 		[window setShouldHideTitle:YES];
+	if ([window respondsToSelector:@selector(setTitlebarAppearsTransparent:)])
+		[window setTitlebarAppearsTransparent:YES];
 	
 	BOOL inPresentationMode = [self inPresentationMode];
 	CGFloat floatingBarHeight = [self floatingBarHeight];
