@@ -36,7 +36,6 @@ const NSInteger CTWindowButtonsWithoutTabStripOffsetFromLeft = 8;
 @end
 
 @implementation CTBrowserWindow {
-	BOOL shouldHideTitle_;
 	NSButton* closeButton_;
 	NSButton* miniaturizeButton_;
 	NSButton* zoomButton_;
@@ -277,11 +276,11 @@ const NSInteger CTWindowButtonsWithoutTabStripOffsetFromLeft = 8;
 }
 
 - (void)setShouldHideTitle:(BOOL)flag {
-	shouldHideTitle_ = flag;
+	self.titleVisibility = flag;
 }
 
 -(BOOL)_isTitleHidden {
-	return shouldHideTitle_;
+	return self.titleVisibility;
 }
 
 // This method is called whenever a window is moved in order to ensure it fits
