@@ -10,10 +10,7 @@
   // Create a simple NSTextView
   NSTextView* tv = [[NSTextView alloc] initWithFrame:NSZeroRect];
   [tv setFont:[NSFont userFixedPitchFontOfSize:13.0]];
-  [tv setAutoresizingMask:                  NSViewMaxYMargin|
-                          NSViewMinXMargin|NSViewWidthSizable|NSViewMaxXMargin|
-                                           NSViewHeightSizable|
-                                           NSViewMinYMargin];
+  [tv setAutoresizingMask:NSViewMaxYMargin|NSViewMinXMargin|NSViewWidthSizable|NSViewMaxXMargin|NSViewHeightSizable|NSViewMinYMargin];
 
   // Create a NSScrollView to which we add the NSTextView
   NSScrollView *sv = [[NSScrollView alloc] initWithFrame:NSZeroRect];
@@ -30,8 +27,7 @@
   // We need to recalculate the frame of the NSTextView when the frame changes.
   // This happens when a tab is created and when it's moved between windows.
   [super viewFrameDidChange:newFrame];
-  NSClipView* clipView = [[view_ subviews] objectAtIndex:0];
-  NSTextView* tv = [[clipView subviews] objectAtIndex:0];
+  NSTextView* tv = [(NSScrollView *)view_ documentView];
   NSRect frame = NSZeroRect;
   frame.size = [(NSScrollView*)(view_) contentSize];
   [tv setFrame:frame];
